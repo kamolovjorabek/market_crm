@@ -1,0 +1,945 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+            {% if page == 'dashboard' or page == None %}
+                <div class="col-md-12">
+                <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border">
+                  <ul class="nav nav-tabs tab-transparent" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home-tab" data-toggle="tab" href="#" role="tab" aria-selected="true">Users</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business-1" role="tab" aria-selected="false">Business</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="performance-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="conversion-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Conversion</a>
+                    </li>
+                  </ul>
+                  <div class="d-md-block d-none">
+                    <a href="#" class="text-light p-1"><i class="mdi mdi-view-dashboard"></i></a>
+                    <a href="#" class="text-light p-1"><i class="mdi mdi-dots-vertical"></i></a>
+                  </div>
+                </div>
+                <div class="tab-content tab-transparent-content">
+                  <div class="tab-pane fade show active" id="business-1" role="tabpanel" aria-labelledby="business-tab">
+                    <div class="row">
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Orders</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">932.00</h2>
+                            <div class="dashboard-progress dashboard-progress-1 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-lightbulb icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Completed</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">5443</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Unique Visitors</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">756,00</h2>
+                            <div class="dashboard-progress dashboard-progress-2 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-account-circle icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Increased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">50%</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3  col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Impressions</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">100,38</h2>
+                            <div class="dashboard-progress dashboard-progress-3 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-eye icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Increased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">35%</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Followers</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">4250k</h2>
+                            <div class="dashboard-progress dashboard-progress-4 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-cube icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Decreased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">25%</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 grid-margin">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                  <h4 class="card-title mb-0">Recent Activity</h4>
+                                  <div class="dropdown dropdown-arrow-none">
+                                    <button class="btn p-0 text-dark dropdown-toggle" type="button" id="dropdownMenuIconButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="mdi mdi-dots-vertical"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuIconButton1">
+                                      <h6 class="dropdown-header">Settings</h6>
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-sm-4 grid-margin  grid-margin-lg-0">
+                                <div class="wrapper pb-5 border-bottom">
+                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
+                                    <p class="mb-0 text-dark">Total Profit</p>
+                                    <span class="text-success"><i class="mdi mdi-arrow-up"></i>2.95%</span>
+                                  </div>
+                                  <h3 class="mb-0 text-dark font-weight-bold">$ 92556</h3>
+                                  <canvas id="total-profit"></canvas>
+                                </div>
+                                <div class="wrapper pt-5">
+                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
+                                    <p class="mb-0 text-dark">Expenses</p>
+                                    <span class="text-success"><i class="mdi mdi-arrow-up"></i>52.95%</span>
+                                  </div>
+                                  <h3 class="mb-4 text-dark font-weight-bold">$ 59565</h3>
+                                  <canvas id="total-expences"></canvas>
+                                </div>
+                              </div>
+                              <div class="col-lg-9 col-sm-8 grid-margin  grid-margin-lg-0">
+                                <div class="pl-0 pl-lg-4 ">
+                                  <div class="d-xl-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-lg-flex align-items-center mb-lg-2 mb-xl-0">
+                                      <h3 class="text-dark font-weight-bold mr-2 mb-0">Devices sales</h3>
+                                      <h5 class="mb-0">( growth 62% )</h5>
+                                    </div>
+                                    <div class="d-lg-flex">
+                                      <p class="mr-2 mb-0">Timezone:</p>
+                                      <p class="text-dark font-weight-bold mb-0">GMT-0400 Eastern Delight Time</p>
+                                    </div>
+                                  </div>
+                                  <div class="graph-custom-legend clearfix" id="device-sales-legend"></div>
+                                  <canvas id="device-sales"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 grid-margin stretch-card">
+                        <div class="card card-danger-gradient">
+                          <div class="card-body mb-4">
+                            <h4 class="card-title text-white">Account Retention</h4>
+                            <canvas id="account-retension"></canvas>
+                          </div>
+                          <div class="card-body bg-white pt-4">
+                            <div class="row pt-4">
+                              <div class="col-sm-6">
+                                <div class="text-center border-right border-md-0">
+                                  <h4>Conversion</h4>
+                                  <h1 class="text-dark font-weight-bold mb-md-3">$306</h1>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="text-center">
+                                  <h4>Cancellation</h4>
+                                  <h1 class="text-dark font-weight-bold">$1,520</h1>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-8  grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="d-xl-flex justify-content-between mb-2">
+                              <h4 class="card-title">Page views analytics</h4>
+                              <div class="graph-custom-legend primary-dot" id="pageViewAnalyticLengend"></div>
+                            </div>
+                            <canvas id="page-view-analytic"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'shops' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="{% url 'dashboard' %}?page=create.shop"><button type="button" class="btn btn-success btn-fw">Create</button></a>
+                    <h4 class="card-title">Shops</h4>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Name </th>
+                          <th> Phone </th>
+                          <th> Location </th>
+                          <th> Amount </th>
+                          <th> Deadline </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for shop in shops %}
+                        <tr>
+                           <td><a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Savdolar">{{ shop.name }}</a></td>
+                          <td> {{ shop.phone }} </td>
+                          <td> {{ shop.location }} </td>
+                          <td> <a href="{% url 'dashboard' %}?page=update.shop&shop.id={{ shop.id }}"><button type="button" class="btn btn-success">Update</button></a> </td>
+                          <td> <a href="{% url 'dashboard' %}?page=delete.shop&shop.id={{ shop.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'create.shop' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create shop</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Phone</label>
+                        <input type="text" name="phone" class="form-control" id="exampleInputEmail3" placeholder="Phone">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Location</label>
+                        <input type="text" name="location" class="form-control" id="exampleInputEmail3" placeholder="Location">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Password1</label>
+                        <input type="password" name="password1" class="form-control" id="exampleInputPassword4" placeholder="*****">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Password2</label>
+                        <input type="password" name="password2" class="form-control" id="exampleInputPassword4" placeholder="*****">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="post" value="create.shop">
+                    </form>
+                    {% for filed in form %}
+                        {% for error in field.errors %}
+                            <p style="color: red; margin-top: 10px">{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'update.shop' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create shop</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" name="name" value="{{ shop.name }}" class="form-control" id="exampleInputName1" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Phone</label>
+                        <input type="text" name="phone" value="{{ shop.phone }}" class="form-control" id="exampleInputEmail3" placeholder="Phone">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Location</label>
+                        <input type="text" name="location" value="{{ shop.location }}" class="form-control" id="exampleInputEmail3" placeholder="Location">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="shop.id" value="{{ shop.id }}">
+                      <input type="hidden" name="post" value="update.shop">
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'delete.shop' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Delete</h4>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Name </th>
+                          <th> Phone </th>
+                          <th> Location </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> {{ shop.name }} </td>
+                          <td> {{ shop.phone }} </td>
+                          <td> {{ shop.location }} </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <form method="post">{% csrf_token %}
+                     <button type="submit" class="btn btn-danger">Delete</button>
+                      <input type="hidden" name="post" value="delete.shop">
+                      <input type="hidden" name="shop.id" value="{{ shop.id }}">
+                      </form>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'shop' and section == 'Savdolar' %}
+                <div class="col-lg-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h1>{{ section }}</h1>
+                    <div class="card-body">
+                    <div class="template-demo">
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Savdolar"><button type="button" class="btn btn-primary btn-rounded btn-fw">Savdolar</button></a>
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Maxsulotlar"><button type="button" class="btn btn-secondary btn-rounded btn-fw">Maxsulotlar</button></a>
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Xaridorlar"><button type="button" class="btn btn-success btn-rounded btn-fw">Xaridorlar</button></a>
+                      <button type="button" class="btn btn-danger btn-rounded btn-fw">Danger</button>
+                    </div>
+                  </div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th> Maxsulot </th>
+                          <th> Xaridor </th>
+                          <th> Sotilgan narxi </th>
+                          <th> Miqdori </th>
+                          <th> Sotilgan sana </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for trade in trades %}
+                        <tr class="table-info">
+                            <td> {{ trade.product.title }} </td>
+                            <td> {{ trade.client.name }} </td>
+                            <td> ${{ trade.sold_price }} </td>
+                            <td> {{ trade.qty }} </td>
+                            <td> {{ trade.created_at }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'shop' and section == 'Maxsulotlar' %}
+                <div class="col-lg-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h1>{{ section }}</h1>
+                    <div class="card-body">
+                    <div class="template-demo">
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Savdolar"><button type="button" class="btn btn-primary btn-rounded btn-fw">Savdolar</button></a>
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Maxsulotlar"><button type="button" class="btn btn-secondary btn-rounded btn-fw">Maxsulotlar</button></a>
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Xaridorlar"><button type="button" class="btn btn-success btn-rounded btn-fw">Xaridorlar</button></a>
+                      <button type="button" class="btn btn-danger btn-rounded btn-fw">Danger</button>
+                    </div>
+                  </div>
+                    </p>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th> Maxsulot </th>
+                          <th> Miqdori </th>
+                          <th> Do'kon </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in products %}
+                        <tr class="table-info">
+                            <td> {{ product.product.title }} </td>
+                            <td> {{ product.qty }} </td>
+                            <td> {{ product.shop.name }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'shop' and section == 'Xaridorlar' %}
+                <div class="col-lg-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h1>{{ section }}</h1>
+                    <div class="card-body">
+                    <div class="template-demo">
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Savdolar"><button type="button" class="btn btn-primary btn-rounded btn-fw">Savdolar</button></a>
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Maxsulotlar"><button type="button" class="btn btn-secondary btn-rounded btn-fw">Maxsulotlar</button></a>
+                      <a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Xaridorlar"><button type="button" class="btn btn-success btn-rounded btn-fw">Xaridorlar</button></a>
+                      <button type="button" class="btn btn-danger btn-rounded btn-fw">Danger</button>
+                    </div>
+                  </div>
+                    </p>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th> Ism </th>
+                          <th> Telefon raqam </th>
+                          <th> Do'kon </th>
+                          <th> Vaqt </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for client in clients %}
+                        <tr class="table-info">
+                            <td> {{ client.name }} </td>
+                            <td> {{ client.phone_number }} </td>
+                            <td> {{ client.shop.name }} </td>
+                            <td> {{ client.created_at }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'products' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Products</h4>
+                    <a href="{% url 'dashboard' %}?page=create.product"><button type="button" class="btn btn-success btn-fw">Create</button></a>
+                    <form>
+                      <select name="measure">
+                        <option selected>Measure</option>
+                        <option value="kg">kg</option>
+                        <option value="liter">liter</option>
+                        <option value="piece">piece</option>
+                      </select>
+                      <input type="submit">
+                      <input type="hidden" name="page" value="products">
+                    </form>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Maxsulot </th>
+                          <th> Category </th>
+                          <th> Nimada hisob </th>
+                          <th> Narxi </th>
+                          <th> Sana </th>
+                          <th> Export </th>
+                          <th> Basket </th>
+                          <th> Delete </th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in products %}
+                        <tr>
+<!--                           <td><a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Savdolar">{{ shop.name }}</a></td>-->
+                          <td> {{ product.title }} </td>
+                          <td> {{ product.category.title }} </td>
+                          <td> {{ product.measure }} </td>
+                          <td> ${{ product.price.price }} </td>
+                          <td> {{ product.created_at }} </td>
+                          <td> <a href="{% url 'dashboard' %}?page=export&product.id={{ product.id }}"><button type="button" class="btn btn-success">Export</button></a> </td>
+                          {% if product.basket_is == 0 %}
+                            <td> <a href="{% url 'dashboard' %}?page=basket&product.id={{ product.id }}"> <button type="button" class="btn btn-danger">Basket</button></a> </td>
+                          {% else %}
+                            <td> Karzinkaga ulagansiz </td>
+                          {% endif %}
+                          <td> <a href="{% url 'dashboard' %}?page=delete.product&product.id={{ product.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'create.product' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create product</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Description</label>
+                        <input type="text" name="description" class="form-control" id="exampleInputEmail3" placeholder="Description">
+                      </div>
+                      <div class="form-group">
+                        <select name="category">
+                        <option selected>Category</option>
+                        {% for category in categorys %}
+                          <option value="{{ category.id }}">{{ category.title }}</option>
+                        {% endfor %}
+                      </select>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <select name="measure">
+                        <option selected>Measure</option>
+                        <option value="kg">kg</option>
+                        <option value="liter">liter</option>
+                        <option value="piece">piece</option>
+                      </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Price</label>
+                        <input type="text" name="price" class="form-control" id="exampleInputEmail3" placeholder="Price">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Discount</label>
+                        <input type="text" value="{{ 0 }}" name="discount" class="form-control" id="exampleInputEmail3" placeholder="Discount %">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="post" value="create.product">
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'export' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Product</h4>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Maxsulot </th>
+                          <th> Category </th>
+                          <th> Nimada hisob </th>
+                          <th> Sana </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+<!--                           <td><a href="{% url 'dashboard' %}?page=shop&shop.id={{ shop.id }}&section=Savdolar">{{ shop.name }}</a></td>-->
+                          <td> {{ product.title }} </td>
+                          <td> {{ product.category.title }} </td>
+                          <td> {{ product.measure }} </td>
+                          <td> {{ product.created_at }} </td>
+<!--                          <td> <a href="{% url 'dashboard' %}?page=delete.shop&shop.id={{ shop.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>-->
+                        </tr>
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                        <div class="row">
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Sotilgan</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">{{ product.sell_qty }} {{ product.measure }}</h2>
+                            <div class="dashboard-progress dashboard-progress-1 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-lightbulb icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Shu sanagach</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">{{ date }}</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Asil narxi</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">${{ product.price.price }}</h2>
+                            <div class="dashboard-progress dashboard-progress-2 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-account-circle icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">{{ product.price.discount }}% chegirmadagi narxi </p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">${{ product.price.discount_price }}</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3  col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Omboringizda</h5>
+                            {% if warehouse.warehouse_qty %}
+                                <h2 class="mb-4 text-dark font-weight-bold">{{ warehouse.warehouse_qty }} {{ product.measure }}</h2>
+                            {% else %}
+                                <h2 class="mb-4 text-dark font-weight-bold">Yo'q</h2>
+                            {% endif %}
+                            <div class="dashboard-progress dashboard-progress-3 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-eye icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Maxsulotning umumiy narxi</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark"></h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Followers</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">4250k</h2>
+                            <div class="dashboard-progress dashboard-progress-4 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-cube icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Decreased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">25%</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'menu.basket' %}
+                  <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Products</h4>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Maxsulot </th>
+                          <th> Category </th>
+                          <th> Nimada hisob </th>
+                          <th> Savat sanasi </th>
+                          <th> Maxsulot sanasi </th>
+                          <th> Export </th>
+                          <th> Delete </th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for basket in baskets %}
+                        <tr>
+                          <td> {{ basket.product.title }} </td>
+                          <td> {{ basket.product.category.title }} </td>
+                          <td> {{ basket.product.measure }} </td>
+                          <td> {{ basket.created_at }} </td>
+                          <td> {{ basket.product.created_at }} </td>
+                          <td> <a href="{% url 'dashboard' %}?page=export&product.id={{ basket.product.id }}"><button type="button" class="btn btn-success">Export</button></a> </td>
+                          <td> <a href="{% url 'dashboard' %}?page=delete.basket&basket.id={{ basket.id }}"><button type="button" class="btn btn-danger">Delete</button></a> </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'warehouse' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="{% url 'dashboard' %}?page=create.warehouse"><button type="button" class="btn btn-success btn-fw">Create</button></a>
+                    <h4 class="card-title">Warehouses</h4>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Name </th>
+                          <th> Phone </th>
+                          <th> Location </th>
+                          <th> Amount </th>
+                          <th> Deadline </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+<!--                      <a href="{% url 'dashboard' %}?page=warehouse&warehouse.id={{ warehouse.id }}"></a>-->
+                      {% for warehouse in warehouses %}
+                        <tr>
+                          <td><a href="{% url 'dashboard' %}?page=warehouse.product.list&warehouse.id={{ warehouse.id }}">{{ warehouse.name }}</a></td>
+                          <td> {{ warehouse.phone }} </td>
+                          <td> {{ warehouse.location }} </td>
+                          <td> <a href="{% url 'dashboard' %}?page=update.warehouse&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-success">Update</button></a> </td>
+                          <td> <a href="{% url 'dashboard' %}?page=delete.warehouse&warehouse.id={{ warehouse.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'create.warehouse' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create warehouse</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Phone</label>
+                        <input type="text" name="phone" class="form-control" id="exampleInputEmail3" placeholder="Phone">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Location</label>
+                        <input type="text" name="location" class="form-control" id="exampleInputEmail3" placeholder="Location">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Password1</label>
+                        <input type="password" name="password1" class="form-control" id="exampleInputPassword4" placeholder="*****">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Password2</label>
+                        <input type="password" name="password2" class="form-control" id="exampleInputPassword4" placeholder="*****">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="post" value="create.warehouse">
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'update.warehouse' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create warehouse</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" name="name" value="{{ warehouse.name }}" class="form-control" id="exampleInputName1" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Phone</label>
+                        <input type="text" name="phone" value="{{ warehouse.phone }}" class="form-control" id="exampleInputEmail3" placeholder="Phone">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Location</label>
+                        <input type="text" name="location" value="{{ warehouse.location }}" class="form-control" id="exampleInputEmail3" placeholder="Location">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Password1</label>
+                        <input type="password" name="password1" class="form-control" id="exampleInputPassword4" placeholder="*****">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Password2</label>
+                        <input type="password" name="password2" class="form-control" id="exampleInputPassword4" placeholder="*****">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="warehouse.id" value="{{ warehouse.id }}">
+                      <input type="hidden" name="post" value="update.warehouse">
+                    </form>
+<!--                    {{ form.errors }}-->
+                    {% for filed in form %}
+                       {% for error in field.errors %}
+                         <p>{{ error }}</p>
+                       {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% elif page == 'warehouse.product.list' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+<!--                    <a href="{% url 'dashboard' %}?page=create.warehouse"><button type="button" class="btn btn-success btn-fw">Create</button></a>-->
+                    <h4 class="card-title">Warehouses Product List</h4>
+                    <div class="card-body">
+                      <div class="template-demo">
+                        <a href="{% url 'dashboard' %}?page=warehouse.product.list&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-primary btn-rounded btn-fw">Product list</button></a>
+                        <a href="{% url 'dashboard' %}?page=import.product.warehouse&warehouse.id={{warehouse.id}}"><button type="button" class="btn btn-secondary btn-rounded btn-fw">Import product</button></a>
+                        <a href="{% url 'dashboard' %}?page=product.in.warehouse&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-success btn-rounded btn-fw">Warehouse products</button></a>
+                        <a href="{% url 'dashboard' %}?page=request.shop&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-danger btn-rounded btn-fw">Requests shop</button></a>
+                      </div>
+                    </div>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Name </th>
+                          <th> Qty </th>
+                          <th> Created </th>
+<!--                          <th> Price </th>-->
+<!--                          <th> Discount </th>-->
+                        </tr>
+                      </thead>
+                      <tbody>
+<!--                      <a href="{% url 'dashboard' %}?page=warehouse&warehouse.id={{ warehouse.id }}"></a>-->
+                      {% for import_warehouse_product in import_warehouse_products %}
+                        <tr>
+                          <td> {{ import_warehouse_product.product.title }} </td>
+                          <td> {{ import_warehouse_product.qty }} </td>
+                          <td> {{ import_warehouse_product.created_at }} </td>
+<!--                          <td> <a href="{% url 'dashboard' %}?page=update.warehouse&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-success">Update</button></a> </td>-->
+<!--                          <td> <a href="{% url 'dashboard' %}?page=delete.warehouse&warehouse.id={{ warehouse.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>-->
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'import.product.warehouse' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Import Product Warehouse</h4>
+                <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <select name="product">
+                        <option selected>Products</option>
+                          {% for product in products %}
+                            <option value="{{ product.id }}">{{ product.title }}</option>
+                          {% endfor %}
+                      </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Phone</label>
+                        <input type="text" name="qty" class="form-control" id="exampleInputEmail3" placeholder="Qty">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="shop" value="{{ warehouse.id }}">
+                      <input type="hidden" name="post" value="import.product.warehouse">
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'product.in.warehouse' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+<!--                    <a href="{% url 'dashboard' %}?page=create.warehouse"><button type="button" class="btn btn-success btn-fw">Create</button></a>-->
+                    <h4 class="card-title">Warehouses Product List</h4>
+                    <div class="card-body">
+                      <div class="template-demo">
+                        <a href="{% url 'dashboard' %}?page=warehouse.product.list&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-primary btn-rounded btn-fw">Product list</button></a>
+                        <a href="{% url 'dashboard' %}?page=import.product.warehouse&warehouse.id={{warehouse.id}}"><button type="button" class="btn btn-secondary btn-rounded btn-fw">Import product</button></a>
+                        <a href="{% url 'dashboard' %}?page=product.in.warehouse&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-success btn-rounded btn-fw">Warehouse products</button></a>
+                        <a href="{% url 'dashboard' %}?page=request.shop&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-danger btn-rounded btn-fw">Requests shop</button></a>
+                      </div>
+                    </div>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Name </th>
+                          <th> Qty </th>
+                          <th> Created </th>
+<!--                          <th> Price </th>-->
+<!--                          <th> Discount </th>-->
+                        </tr>
+                      </thead>
+                      <tbody>
+<!--                      <a href="{% url 'dashboard' %}?page=warehouse&warehouse.id={{ warehouse.id }}"></a>-->
+                      {% for product in products %}
+                        <tr>
+                          <td> {{ product.product.title }} </td>
+                          <td> {{ product.qty }} </td>
+                          <td> {{ product.created_at }} </td>
+<!--                          <td> <a href="{% url 'dashboard' %}?page=update.warehouse&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-success">Update</button></a> </td>-->
+<!--                          <td> <a href="{% url 'dashboard' %}?page=delete.warehouse&warehouse.id={{ warehouse.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>-->
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+
+              {% elif page == 'request.shop' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+<!--                    <a href="{% url 'dashboard' %}?page=create.warehouse"><button type="button" class="btn btn-success btn-fw">Create</button></a>-->
+                    <h4 class="card-title">Warehouses Product List</h4>
+                    <div class="card-body">
+                      <div class="template-demo">
+                        <a href="{% url 'dashboard' %}?page=warehouse.product.list&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-primary btn-rounded btn-fw">Product list</button></a>
+                        <a href="{% url 'dashboard' %}?page=import.product.warehouse&warehouse.id={{warehouse.id}}"><button type="button" class="btn btn-secondary btn-rounded btn-fw">Import product</button></a>
+                        <a href="{% url 'dashboard' %}?page=product.in.warehouse&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-success btn-rounded btn-fw">Warehouse products</button></a>
+                        <a href="{% url 'dashboard' %}?page=request.shop&warehouse.id={{ warehouse.id }}"><button type="button" class="btn btn-danger btn-rounded btn-fw">Requests shop</button></a>
+                      </div>
+                    </div>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Shop </th>
+                          <th> Product </th>
+                          <th> Request qty </th>
+                          <th> Warehouse qty </th>
+                          <th> Status </th>
+                          <th> Error </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+<!--                      <a href="{% url 'dashboard' %}?page=warehouse&warehouse.id={{ warehouse.id }}"></a>-->
+                      {% for request_product in request_products %}
+                        <tr>
+                          <td> {{ request_product.shop.name }} </td>
+                          <td> {{ request_product.product.title }} </td>
+                          <td> {{ request_product.qty }} </td>
+                          <td> {{ request_product.warehouse_qty.qty }} </td>
+                          <td> <a href="{% url 'dashboard' %}?page=form.request.shop&warehouse.id={{ warehouse.id }}&request.product={{ request_product.id }}"><button type="button" class="btn btn-success">{{ request_product.status }}</button></a> </td>
+<!--                          <td><a href="{% url 'dashboard' %}?page=rejected.product&qty={{ request_product.qty }}&product.id={{ request_product.product.id }}&warehouse.id={{ warehouse.id }}&request.product={{ request_product.id }}"><button type="button" class="btn btn-danger"> Confirmed </button></a></td>-->
+<!--                          <td> <a href="{% url 'dashboard' %}?page=delete.warehouse&warehouse.id={{ warehouse.id }}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>-->
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+              {% elif page == 'form.request.shop' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create shop</h4>
+                    <form class="forms-sample">
+                      <div class="form-group">
+                        <label for="exampleInputName1">Shop</label>
+                        <input type="text" name="shop" class="form-control" id="exampleInputName1" disabled placeholder="{{ request_product.shop.name }}" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Warehouse</label>
+                        <input type="text" name="warehouse" class="form-control" id="exampleInputEmail3" disabled placeholder="{{ request_product.warehouse.name }}" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Product</label>
+                        <input type="text" name="product" class="form-control" id="exampleInputEmail3" disabled placeholder="{{ request_product.product.title }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Request qty</label>
+                        <input type="text" name="request_qty" class="form-control" id="exampleInputPassword4" disabled value="{{ request_product.qty }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Sent qty</label>
+                        <input type="text" name="sent_qty" class="form-control" id="exampleInputPassword4">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="shop" value="{{ request_product.shop.id }}">
+                      <input type="hidden" name="warehouse" value="{{ request_product.warehouse.id }}">
+                      <input type="hidden" name="product" value="{{ request_product.product.id }}">
+                      <input type="hidden" name="request_product" value="{{ request_product.id }}">
+                      <input type="hidden" name="request_qty" value="{{ request_product.qty }}">
+                      <input type="hidden" name="warehouse.id" value="{{ request_product.warehouse.id }}">
+                      <input type="hidden" name="request_id" value="{{ request_product.id }}">
+                      <input type="hidden" name="page" value="sent.shop">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+            </div>
+          </div>
+{% endblock content %}

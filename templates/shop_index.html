@@ -1,0 +1,253 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+            {% if page == 'dashboard' or page == None %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Shops</h4>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Product name </th>
+                          <th> Product category </th>
+                          <th> Product qty </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in products %}
+                        <tr>
+                          <td> {{ product.product.title }} </td>
+                          <td> {{ product.category }} </td>
+                          <td> {{ product.qty }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+            {% elif page == 'trade' %}
+                <div class="col-sm-5 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create shop</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Products</label>
+                        <select name="product" required class="form-control">
+                        <option selected disabled>Products</option>
+                        {% for shop_product in shop_products %}
+                          <option value="{{ shop_product.id }}">{{ shop_product.product_title }} --> {{ shop_product.product_price }}$</option>
+                        {% endfor %}
+                      </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Sell price</label>
+                        <input type="text" name="price" class="form-control" id="exampleInputEmail3">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Qty</label>
+                        <input type="text" name="qty" required class="form-control" id="exampleInputEmail3">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="post" value="trade">
+                    </form>
+                    {% for filed in form %}
+                        {% for error in field.errors %}
+                            <p style="color: red; margin-top: 10px">{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+                <div class="col-sm-7  grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                        <div class="card-body">
+                    <h4 class="card-title">Basic Table</h4>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Product</th>
+                          <th>Category</th>
+                          <th>Price</th>
+                          <th>Qty</th>
+                          <th>Created at</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for trade in trades %}
+                        <tr>
+                          <td>{{ trade.product.title }}</td>
+                          <td>{{ trade.category }}</td>
+                          <td>{{ trade.sold_price }}</td>
+                          <td>{{ trade.qty }}</td>
+                          <td>{{ trade.created_at }}</td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+            {% elif page == 'request.warehouse.product.list' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <a href="{% url 'shop' %}?page=request.to.warehouse"><button type="button" class="btn btn-success btn-fw">Create</button></a>
+                    <form>
+                    <select name="status" class="form-control">
+                        <option selected>Status</option>
+                          <option value="new">new</option>
+                          <option value="accepted">accepted</option>
+                          <option value="rejected">rejected</option>
+                          <option value="confirmed">confirmed</option>
+                      </select>
+                      <input type="submit">
+                      <input type="hidden" name="page" value="request.warehouse.product.list">
+                    </form>
+                    <h4 class="card-title">Shops</h4>
+                    </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Warehouse </th>
+                          <th> Product name </th>
+                          <th> Product category </th>
+                          <th> Product measure </th>
+                          <th> Qty </th>
+                          <th> Request status </th>
+                          <th> Created_at </th>
+                          <th> Update_at </th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for request_product in request_products %}
+                        <tr>
+                          <td> {{ request_product.warehouse.name }} </td>
+                          <td> {{ request_product.product.title }} </td>
+                          <td> {{ request_product.category_name }} </td>
+                          <td> {{ request_product.product.measure }} </td>
+                          <td> {{ request_product.qty }} </td>
+                          <td><a href="{% url 'shop' %}?page=confirmed.product&request_product={{ request_product.id }}">{{ request_product.status }}</a></td>
+                          <td> {{ request_product.created_at }} </td>
+                          <td> {{ request_product.update_at }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+            {% elif page == 'request.to.warehouse' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create shop</h4>
+                    <form class="forms-sample" method="POST">{% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Warehouse</label>
+                        <select name="warehouse" class="form-control">
+                        <option selected>Warehouses</option>
+                        {% for warehouse in warehouses %}
+                          <option value="{{ warehouse.id }}">{{ warehouse.name }}</option>
+                        {% endfor %}
+                      </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Product</label>
+                        <select name="product" class="form-control">
+                        <option selected>Products</option>
+                        {% for product in products %}
+                          <option value="{{ product.id }}">{{ product.title }}</option>
+                        {% endfor %}
+                      </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Qty</label>
+                        <input type="text" name="qty" class="form-control" id="exampleInputEmail3" placeholder="qty">
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="post" value="request.to.warehouse">
+                    </form>
+                    {% for filed in form %}
+                        {% for error in field.errors %}
+                            <p style="color: red; margin-top: 10px">{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% elif page == 'confirmed.product' %}
+                <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create shop</h4>
+                    <form class="forms-sample">
+                      <div class="form-group">
+                        <label for="exampleInputName1">Shop</label>
+                        <input type="text" name="shop" class="form-control" id="exampleInputName1" disabled value="{{ request_products.shop.name }}" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Warehouse</label>
+                        <input type="text" name="warehouse" class="form-control" id="exampleInputEmail3" disabled placeholder="{{ request_products.warehouse.name }}" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Product</label>
+                        <input type="text" name="product" class="form-control" id="exampleInputEmail3" disabled placeholder="{{ request_products.product.title }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Qty</label>
+                        <input type="text" name="qty" class="form-control" id="exampleInputPassword4" disabled value="{{ request_products.qty }}">
+                      </div>
+
+                      <button type="submit" class="btn btn-outline-primary btn-icon-text">Submit</button>
+                      <input type="hidden" name="request_product_id" value="{{ request_products.id }}">
+                      <input type="hidden" name="request_product_product" value="{{ request_products.product.id }}">
+                      <input type="hidden" name="qty" value="{{ request_products.qty }}">
+                      <input type="hidden" name="page" value="confirmed.shop">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            {% elif page == 'shop.products' %}
+                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Shops</h4>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Product name </th>
+                          <th> Product category </th>
+                          <th> Product qty </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in products %}
+                        <tr>
+                          <td> {{ product.product.title }} </td>
+                          <td> {{ product.category }} </td>
+                          <td> {{ product.qty }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+<!--                    <button><a href="{% url 'dashboard' %}?page=create.shop">Create</a></button>-->
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+            </div>
+          </div>
+{% endblock content %}
+
